@@ -33,7 +33,9 @@ execute if score tick time matches -1 run scoreboard players remove sec time 1
 execute if score tick time matches -1 run scoreboard players set tick time 19
 execute if score running time matches 1 run scoreboard players remove tick time 1
 
-execute if score hour time matches ..0 if score min time matches ..0 if score sec time matches ..9 run bossbar set timer name [{"text":"0","color":"green","bold":true},{"score":{"name":"sec","objective":"time"},"color":"green","bold":true}]
+execute if score hour time matches ..0 if score min time matches ..0 if score sec time matches ..0 run bossbar set timer name [{"text":"0","color":"green","bold":true}]
+
+execute if score hour time matches ..0 if score min time matches ..0 if score sec time matches 1..9 run bossbar set timer name [{"text":"0","color":"green","bold":true},{"score":{"name":"sec","objective":"time"},"color":"green","bold":true}]
 execute if score hour time matches ..0 if score min time matches ..0 if score sec time matches 10.. run bossbar set timer name [{"score":{"name":"sec","objective":"time"},"color":"green","bold":true}]
 
 execute if score hour time matches ..0 if score min time matches 1..9 if score sec time matches ..9 run bossbar set timer name [{"text":"0","color":"green","bold":true},{"score":{"name":"min","objective":"time"},"color":"green","bold":true},{"text":":","bold":true},{"text":"0","color":"green","bold":true},{"score":{"name":"sec","objective":"time"},"color":"green","bold":true}]
