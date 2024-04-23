@@ -1,7 +1,6 @@
 execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 run title @a title {"text":"ZEIT VORBEI!","color":"red","bold":true,"italic":true}
 execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 as @a at @s run playsound minecraft:entity.elder_guardian.curse record @s
-execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 run scoreboard players set total time 0
-execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 run scoreboard players set running time 0
+execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 run function timer:load
 
 
 execute if score running time matches 1 if score wasreset time matches 1 run scoreboard players operation hoursinseconds time = hour time
