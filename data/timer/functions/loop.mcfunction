@@ -4,7 +4,7 @@ execute unless entity @p run scoreboard players set pausednoplayer time 1
 execute if entity @p run scoreboard players set pausednoplayer time 0
 
 # Winning screen & reset
-execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 if score pausednoplayer time matches 0 run title @a title {"text":"ZEIT VORBEI!","color":"red","bold":true,"italic":true}
+execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 if score pausednoplayer time matches 0 run title @a title {"text":"Countdown ended!","color":"red","bold":true,"italic":true}
 execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 if score pausednoplayer time matches 0 as @a at @s run playsound minecraft:entity.elder_guardian.curse record @s
 execute if score tick time matches 0 if score hour time matches 0 if score min time matches 0 if score sec time matches 0 if score running time matches 1 if score pausednoplayer time matches 0 run function timer:load
 
